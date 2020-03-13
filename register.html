@@ -1,0 +1,729 @@
+
+<!-- saved from url=(0040)http://nimsuniversity.org/online/reg.php -->
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link rel="stylesheet" type="text/css" href="./register/jquery.autocomplete.css">
+<link rel="stylesheet" type="text/css" href="./register/default.css">
+<script language="javascript" src="./register/qsslib.js"></script>
+<script type="text/javascript" src="./register/jquery.js"></script>
+<script type="text/javascript" src="./register/"></script>
+<script language="javascript" src="./register/ajax.js"></script>
+<script language="javascript" src="./register/app.js"></script>
+<script language="javascript">
+function same()
+{
+	if(document.f1.ck.checked==true)
+	{
+		//alert("");
+
+		document.f1.mail_add1.value=document.f1.per_add1.value;
+		document.f1.mail_add1.disabled=true;
+		document.f1.mail_add2.value=document.f1.per_add2.value;
+		document.f1.mail_add2.disabled=true;
+		if(document.f1.per_city_type.checked==true)
+			{
+				document.f1.mail_city_type.checked=true;
+			}
+		document.f1.mail_city.value=document.f1.per_city.value;
+		document.f1.mail_city.disabled=true;
+		document.f1.mail_pin.value=document.f1.per_pin.value;
+		document.f1.mail_pin.disabled=true;
+	}
+	else{
+		document.f1.mail_add1.value="";
+		document.f1.mail_add1.disabled=false;
+		document.f1.mail_add2.value=""
+		document.f1.mail_add2.disabled=false;
+		document.f1.mail_city_type.checked=false;
+		document.f1.mail_city.value="";
+		document.f1.mail_city.disabled=false;
+		document.f1.mail_pin.value="";
+		document.f1.mail_pin.disabled=false;
+	}
+}
+</script>
+<script type="text/javascript">
+$().ready(function() {
+	$("#mail_city").autocomplete("autocomplete/city.php", {
+		width: 390,
+		matchContains: true,
+		selectFirst: false
+	});
+});
+$().ready(function() {
+	$("#per_city").autocomplete("autocomplete/city.php", {
+		width: 390,
+		matchContains: true,
+		selectFirst: false
+	});
+});
+</script>
+<script language="javascript">
+function QssFormValidator(theForm) {
+	if (!validateListBox(theForm.course_mode, "Programme Mode")) return (false);
+	if (!validateListBox(theForm.prog_name, "Programme Name")) return (false);
+	if (!validateListBox(theForm.title, "Title")) return (false);
+	if (!validateText(theForm.first_name, "First Name", 50, 1, 0, 0, 0)) return (false);
+	//if (!validateText(theForm.middle_name, "Middle Name", 50, 1, 0, 0, 0)) return (false);
+	if (!validateText(theForm.last_name, "Last Name", 50, 1, 0, 0, 0)) return (false);
+	if (!validateText(theForm.father_name, "Father's Name", 50, 1, 0, 0, 0)) return (false);
+	if (!validateListBox(theForm.gender, "Gender")) return (false);
+	if (!validateListBox(theForm.catagory, "Catagory")) return (false);
+	if (!validateListBox(theForm.day, "Day")) return (false);
+	if (!validateListBox(theForm.month, "Month", 50, 1, 0, 0, 0)) return (false);
+	if (!validateListBox(theForm.year, "Year", 50, 1, 0, 0, 0)) return (false);
+	if (!validateText(theForm.email, "Email", 50, 0, 0, 0, 1)) return (false);
+	if (theForm.email.value!=theForm.vemail.value) 
+	{
+		alert("Both email address are not same.");
+		return (false);
+	}
+	//if (!validateText(theForm.contact_std, "STD Code", 50, 0, 1, 0, 0)) return (false);
+   //if (!validateText(theForm.contact, "Contact No.", 50, 0, 1, 0, 0)) return (false);
+	if (!validateText(theForm.mobile, "Mobile 1.", 50, 0, 1, 0, 0)) return (false);
+	//if (!validateText(theForm.nationality, "Nationality")) return (false);
+	//if (!validateText(theForm.per_add1, "Permanent Address1", 50, 1, 0, 0, 0)) return (false);	
+	if (!validateText(theForm.per_add1, "Permanent Address1")) return (false);
+	//if (!validateText(theForm.mail_pin, "Maling Pincode", 50, 0, 1, 0, 0)) return (false);
+	if (!validateText(theForm.per_city, "Permanent City")) return (false);
+	//if (!validateText(theForm.per_pin, "Permanent Pincode", 50, 0, 1, 0, 0)) return (false);
+	if (!validateText(theForm.mail_add1, "Mailing Address1")) return (false);
+	if (!validateText(theForm.mail_city, "Mailing City")) return (false);
+	return (true);
+}
+</script>
+<style type="text/css">
+<!--
+.style3 {
+    background-image: img src="./register/footer.png";
+	font-family: Georgia;
+	font-weight: bold;
+	font-size: 12pt;
+	color: #1F5382;
+}
+.style4 {
+	color: #FF3300;
+	font-weight: bold;
+	font-family: Arial;
+	font-size: 10pt;
+}
+.style5 {color: #000000}
+.style6 {
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 10pt;
+	color: #1F5382;
+}
+.style11 {font-family: Arial; font-size: 10pt; }
+.style12 {font-size: 10pt; color: #1F5382; font-family: Arial;}
+.style13 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style15 {font-family: Arial; font-weight: bold; font-size: 10pt; color: #FFFFFF; }
+.style16 {color: #CC3300}
+.style17 {
+	font-size: 8pt;
+	font-style: italic;
+}
+-->
+</style>
+        
+        
+</head>
+<body cz-shortcut-listen="true"><p align="center" style="font-size:20px;font-family:sans-serif"><b>
+    <img src="./register/header.png" width="300" height="100"><br>
+    <span>Admissions Online Application Form</span></b><br><br>
+<small><a href="#/online/login.php" style="color: #0200f3; font-size: 12px;">Already Registered? Click Here to View/Print Application</a> </small>
+<br><br>
+<small><a href="#downloads/" style="color: red; font-size: 12px;">Download Offline Application Form</a> </small>
+
+</p>
+<div style="font-family: Verdana,Arial, Helvetica, sans-serif; font-size:12px; color:#FF8040; font-weight:bold;width:800px;text-align:right;margin:0 auto;">* Mandatory Field</div>
+<p align="center"></p>
+<form name="f1" id="f1" method="post" action="http://nimsuniversity.org/online/reg.php" onsubmit="return (QssFormValidator(this));" class="reg">
+
+
+
+
+<fieldset>
+  <legend>PROGRAMME DETAILS:</legend>
+  <table width="800" cellpadding="2" cellspacing="1" rules="all">
+    <tbody>
+        <tr>
+    <td width="180" align="left"><label>Scholarship Option:<span>*</span></label></td>
+    <td>
+    <select name="course_mode" id="course_mode" onchange="get_prog();">
+    <option value="-1">--select mode--</option>
+	
+			<option value="4">1 Year Full Tuition Scholarship</option>
+			<option value="4">30% Tuition scholarship</option>  		
+		    </select> <p><a href="course_details.html">click here for option details</a></p>   </td>
+  </tr>
+        <tr>
+    <td width="180" align="left"><label>Programme Mode:<span>*</span></label></td>
+    <td>
+    <select name="course_mode" id="course_mode" onchange="get_prog();">
+    <option value="-1">--select mode--</option>
+	
+			<option value="4">Regular</option>
+			
+	
+    		
+		    </select>    </td>
+  </tr>
+  <tr>
+    <td width="180" align="left"><label>Programme Name:<span>*</span></label></td>
+    <td>
+    <div id="app"><select name="prog_name" id="prog_name">
+    <option value="-1">--select program--</option>
+    			<option value="41">B.Arch.</option>
+					<option value="464">B.Sc. Home Science</option>
+					<option value="335">BA (Journalism and Mass Communication)</option>
+					<option value="490">Bachelor of Arts (BA Hons.) Anthropology</option>
+					<option value="471">Bachelor of Arts (BA Hons.) English</option>
+					<option value="484">Bachelor of Arts (BA Hons.) History</option>
+					<option value="480">Bachelor of Arts (BA Hons.) Public Administration</option>
+					<option value="478">Bachelor of Arts (BA Hons.) Sociology</option>
+					<option value="395">Bachelor of Arts (BA) (Hons) Fashion Design Technology</option>
+					<option value="450">Bachelor of Arts (BA) English Literature</option>
+					<option value="461">Bachelor of Arts (BA) Geography</option>
+					<option value="463">Bachelor of Arts (BA) History</option>
+					<option value="458">Bachelor of Arts (BA) Political Science</option>
+					<option value="462">Bachelor of Arts (BA) Psychology</option>
+					<option value="459">Bachelor of Arts (BA) Public Administration</option>
+					<option value="457">Bachelor of Arts (BA) Sociology</option>
+					<option value="368">Bachelor of Arts (BA) Sports Education</option>
+					<option value="400">Bachelor of Theatre, Film &amp; Television Technology</option>
+					<option value="505">Bachelor of Visual Arts</option>
+					<option value="401">Diploma in Television &amp; Film Production</option>
+				    <option value="225">B.Sc. (Hons) Biochemistry</option>
+					<option value="224">B.Sc. (Hons) Microbiology</option>
+					<option value="528">B.Sc. (Hons.) Environmental Science</option>
+					<option value="265">B.Sc. Botany</option>
+					<option value="263">B.Sc. Chemistry</option>
+					<option value="527">B.Sc. Environmental Science</option>
+					<option value="268">B.Sc. Geography</option>
+					<option value="266">B.Sc. Mathematics</option>
+					<option value="262">B.Sc. Physics</option>
+					<option value="269">B.Sc. Psychology</option>
+					<option value="264">B.Sc. Zoology</option>
+					<option value="512">Bachelor of Commerce (B.Com.)</option>
+					<option value="510">Bachelor of Commerce (Hons.)</option>
+					<option value="541">B.Tech Instrumentation &amp; Control Engineering</option>
+					<option value="59">B.Tech. Aerospace Engineering</option>
+					<option value="115">B.Tech. Agricultural Engineering</option>
+					<option value="126">B.Tech. Agricultural Engineering</option>
+					<option value="116">B.Tech. Automobile Engineering</option>
+					<option value="127">B.Tech. Automobile Engineering</option>
+					<option value="111">B.Tech. Biotechnology</option>
+					<option value="122">B.Tech. Biotechnology + MBA</option>
+					<option value="114">B.Tech. Chemical Engineering</option>
+					<option value="125">B.Tech. Chemical Engineering </option>
+					<option value="112">B.Tech. Civil Engineering</option>
+					<option value="123">B.Tech. Civil Engineering + MBA</option>
+					<option value="106">B.Tech. Computer Science &amp; Engineering</option>
+					<option value="117">B.Tech. Computer Science &amp; Engineering</option>
+					<option value="110">B.Tech. Electrical Engineering</option>
+					<option value="121">B.Tech. Electrical Engineering </option>
+					<option value="107">B.Tech. Electronics &amp; Communication Engineering</option>
+					<option value="118">B.Tech. Electronics &amp; Communication Engineering</option>
+					<option value="61">B.Tech. Energy &amp; Power Engineering</option>
+					<option value="108">B.Tech. Information Technology</option>
+					<option value="119">B.Tech. Information Technology</option>
+					<option value="113">B.Tech. Mechanical Engineering</option>
+					<option value="124">B.Tech. Mechanical Engineering </option>
+					<option value="558">B.Tech. Nano Technology</option>
+					<option value="60">B.Tech. Petroleum Engineering</option>
+					<option value="504">Bachelor of Fine Arts</option>
+					<option value="506">Bachelor of Performing Arts</option>
+					<option value="552">Bachelor of Arts (BA Hons.) Economics</option>
+					<option value="460">Bachelor of Arts (BA) Economics</option>
+					<option value="352">Bachelor of Library &amp; Information Science</option>
+					<option value="384">B.Sc. Aviation</option>
+					<option value="586">Bachelor in Hotel Management</option>
+					<option value="193">Bachelor of Financial and Marketing Management</option>
+					<option value="378">Bachelor of Hotel Management &amp; Catering Technology</option>
+					<option value="192">Bachelor of Management Studies</option>
+					<option value="379">Bachelor of Tourism &amp; Travel Management</option>
+					<option value="293">B. Sc. Nursing</option>
+					<option value="308">B.Sc. Blood Transfusion Technology</option>
+					<option value="520">B.Sc. EEG</option>
+					<option value="517">B.Sc. Emergency &amp; Trauma Care Technology</option>
+					<option value="522">B.Sc. Endoscopy Technology</option>
+					<option value="519">B.Sc. Perfusion Technology</option>
+					<option value="521">B.Sc. TMT Technology</option>
+					<option value="307">Bachelor of Optometry</option>
+					<option value="306">Bachelor of Science in Medical Lab Technology</option>
+					<option value="309">Bachelor of Science in Operation Theatre Technology</option>
+					<option value="305">Bachelor of Science in Radiation &amp; Imaging Technology</option>
+					<option value="394">Bachelor of Design (Textile)</option>
+				
+		</select></div>    </td>
+  </tr></tbody></table>
+  </fieldset>
+  
+  <script language="javascript">
+  if(document.f1.course_mode.value!="")
+		{
+			setTimeout("get_prog()",1500);
+		}
+  </script>
+  <fieldset> 
+  <legend>PERSONAL DETAILS:</legend>
+  <table width="100%" cellpadding="2" cellspacing="1" rules="all">
+   <tbody><tr>
+    <td width="180" align="left"><label>Title:<span>*</span></label></td>
+    <td><select name="title">
+    <option value="-1">--title--</option>
+    <option value="Mr">Mr</option>
+    <option value="Ms">Ms</option>
+	<option value="Dr">Dr</option>
+    </select>    </td>
+  </tr>
+  <tr>
+    <td width="180" align="left"><label>First Name:<span>*</span></label></td>
+    <td><input name="first_name" type="text" id="first_name" value=""></td>
+  </tr>
+  <tr>
+    <td width="180" align="left"><label>Middle Name:</label></td>
+    <td><input type="text" name="middle_name" id="middle_name" value=""></td>
+  </tr>
+  <tr>
+    <td width="180" align="left"><label>Last Name:<span>*</span></label></td>
+    <td><input type="text" name="last_name" id="last_name" value=""></td>
+  </tr>
+  <tr>
+    <td width="180" align="left"><label>Father's Name:<span>*</span></label></td>
+    <td><input type="text" name="father_name" id="father_name" value=""></td>
+  </tr>
+  <tr>
+    <td align="left"><label>Mother's Name:<span>*</span></label></td>
+    <td><input type="text" name="mother_name" id="mother_name" value=""></td>
+  </tr>
+  
+  <tr>
+    <td width="180" align="left"><label>Gender:<span>*</span></label></td>
+    <td>
+    <select name="gender">
+    <option value="-1">--select--</option>
+    <option value="M">Male</option>
+    <option value="F">Female</option>
+    </select>    </td>
+  </tr>
+  <tr>
+    <td width="180" align="left"><label>Category:<span>*</span></label></td>
+    <td>
+    <select name="catagory">
+    <option value="-1">--select category--</option>
+	
+	
+		
+	<option value="8">General</option>
+			
+	<option value="9">OBC</option>
+			
+	<option value="12">OTHERS</option>
+			
+	<option value="11">SC</option>
+			
+	<option value="10">ST</option>
+		    </select>
+	
+	    </td>
+  </tr>
+  <tr>
+  
+    
+      <td width="180" align="left"><label>Date of Birth:<span>*</span></label></td>
+    <td><!--input type="text" maxlength="2" size="2" name="day" id="day" value=""><input type="text" maxlength="2" size="2" name="month" id="month" value=""><input type="text" maxlength="2" size="2" name="month" id="month" value=""-->
+    <select name="day">
+    <option value="-1">--day--</option>
+    			    
+								<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+					<option value="19">19</option>
+					<option value="20">20</option>
+					<option value="21">21</option>
+					<option value="22">22</option>
+					<option value="23">23</option>
+					<option value="24">24</option>
+					<option value="25">25</option>
+					<option value="26">26</option>
+					<option value="27">27</option>
+					<option value="28">28</option>
+					<option value="29">29</option>
+					<option value="30">30</option>
+					<option value="31">31</option>
+					
+		    </select>
+    <select name="month">
+    <option value="-1" selected="selected">--month--</option>
+    <option value="1">january</option>
+    <option value="2">february</option>
+    <option value="3">march</option>
+    <option value="4">april</option>
+    <option value="5">may</option>
+    <option value="6">june</option>
+    <option value="7">july</option>
+    <option value="8">august</option>
+    <option value="9">september</option>
+    <option value="10">october</option>
+    <option value="11">november</option>
+    <option value="12">december</option>
+    </select>
+    <script language="javascript">
+	        </script>
+    <select name="year">
+    <option value="-1">--year--</option>
+			
+	
+    			<option value="1990">1990</option>
+						
+	
+    			<option value="1991">1991</option>
+						
+	
+    			<option value="1992">1992</option>
+						
+	
+    			<option value="1993">1993</option>
+						
+	
+    			<option value="1994">1994</option>
+						
+	
+    			<option value="1995">1995</option>
+						
+	
+    			<option value="1996">1996</option>
+						
+	
+    			<option value="1997">1997</option>
+						
+	
+    			<option value="1998">1998</option>
+						
+	
+    			<option value="1999">1999</option>
+						
+	
+    			<option value="2000">2000</option>
+						
+	
+    			<option value="2001">2001</option>
+						
+	
+    			<option value="2002">2002</option>
+						
+	
+    			<option value="2003">2003</option>
+										
+					
+		    </select>    </td>
+  </tr>
+  <tr>
+    <td width="180" align="left"><label>Email:<span>*</span></label></td>
+    <td><input type="text" name="email" id="email" value=""></td>
+  </tr>
+  <tr>
+    <td width="180" align="left"><label>Verify Email:<span>*</span></label></td>
+    <td><input type="text" onpaste="return false;" name="vemail" id="vemail" value=""></td>
+  </tr>
+
+  <tr>
+    <td width="180" align="left"><label>Mobile No. 1:<span>*</span></label></td>
+    <td><input type="text" name="mobile" id="mobile" value=""></td>
+  </tr>
+  <tr>
+    <td width="180" align="left"><label>Mobile No. 2:</label></td>
+    <td><input type="text" name="mobile1" id="mobile1" value=""></td>
+  </tr>
+  <tr>
+    <td width="180" align="left"><label>Nationality:</label></td>
+    <td> <select name="nationality">
+         <option value="Nigerian">Select</option>
+        <option value="Nigerian">Nigerian</option>
+    <option value="Non-Nigerian">Non-Nigerian</option>
+    </select>	</td>
+  </tr>
+      </tbody></table></fieldset>
+  
+  <fieldset>
+  <legend>Last Educational Qualification:</legend>
+  <table width="800" cellpadding="2" cellspacing="1" rules="all">
+ 
+  <tbody><tr>
+    <td align="left" width="180"><label>Name of School: </label></td>
+    <td><input type="text" name="college" id="college" value=""></td>
+  </tr>
+  <tr>
+    <td align="left" width="180"><label>Address of School: </label></td>
+    <td><input type="text" name="pyear" id="pyear" value=""></td>
+  </tr>
+  <tr>
+    <td align="left" width="180"><label>Qualification: </label></td>
+    <td><input type="text" name="board" id="board" value=""></td>
+  </tr>
+ <tr>
+    <td width="180" align="left"><label>Exam Type:</label></td>
+    <td> <select name="nationality">
+        <option value="Non-Nigerian">Select</option>
+        <option value="Nigerian">Waec</option>
+        <option value="Non-Nigerian">Neco</option>
+        <option value="Non-Nigerian">Nabteb</option>
+    </select>	</td>
+  </tr>
+  <tr>
+    <td align="left" width="180"><label>Start:</label></td>
+    <td><input type="text" name="exam_passed" id="exam_passed" value=""> 
+      <span style="font-size:10px;color:#3A3A3A;">[eg: 1999, 2000 etcc]</span></td>
+  </tr>
+        <tr>
+    <td align="left" width="180"><label>End:</label></td>
+    <td><input type="text" name="exam_passed" id="exam_passed" value=""> 
+      <span style="font-size:10px;color:#3A3A3A;">[eg: 2001, 2002 etc]</span></td>
+  </tr>
+      </tbody></table></fieldset>
+
+ 
+ 
+  
+ <fieldset>
+  <legend>Permanent Address:</legend>
+  
+  <table width="800" cellpadding="2" cellspacing="1" rules="all">
+   
+  <tbody><tr>
+    <td width="180" align="left"><label>Address Line 1:<span>*</span></label></td>
+    <td><input type="text" name="per_add1" id="per_add1" value=""></td>
+  </tr>
+  <tr>
+    <td width="180" align="left"><label>Address Line 2:</label></td>
+    <td><input type="text" name="per_add2" id="per_add2" value=""></td>
+  </tr>
+  <tr>
+    <td width="180" align="left"><label>City:<span>*</span></label></td>
+    <td>
+    <input type="text" name="per_city" id="per_city" onblur="get_value(&#39;per_city&#39;);" value="" autocomplete="off" class="ac_input">
+    <!--select name="per_city" id="per_city" onchange="get_value('per_city');">
+    <option value="-1">--select city--</option-->
+        
+  </tr>
+      
+    <tr>
+    <td width="180" align="left"><label>State:<span>*</span></label></td>
+    <td><select name="state">
+<option value="-1" title="---Select State---">---Select State---</option>
+	<option value="28" title="Abia">Abia</option>
+	<option value="2" title="Adamawa">Adamawa</option>
+	<option value="3" title="Akwa Ibom">Akwa Ibom</option>
+	<option value="42" title="Anambra">Anambra</option>
+	<option value="4" title="Bauchi">Bauchi</option>
+	<option value="29" title="Bayelsa">Bayelsa</option>
+	<option value="5" title="Benue">Benue</option>
+	<option value="30" title="Borno ">Borno </option>
+	<option value="31" title="Cross River">Cross River</option>
+	<option value="34" title="Delta">Delta</option>
+	<option value="37" title="Ebonyi">Ebonyi</option>
+	<option value="6" title="Edo">Edo</option>
+	<option value="7" title="Ekiti">Ekiti</option>
+	<option value="8" title="Enugu">Enugu</option>
+	<option value="9" title="Abuja">Abuja</option>
+	<option value="10" title="Gombe ">Gombe</option>
+	<option value="11" title="Imo">Imo</option>
+	<option value="12" title="Jigawa">Jigawa</option>
+	<option value="32" title="Kaduna">Kaduna</option>
+	<option value="13" title="Kano">Kano</option>
+	<option value="14" title="Katsina">Katsina</option>
+	<option value="15" title="Kebbi">Kebbi</option>
+	<option value="16" title="Kogi">Kogi</option>
+	<option value="17" title="Kwara">Kwara</option>
+	<option value="18" title="Lagos">Lagos</option>
+	<option value="39" title="Nasarawa">Nasarawa</option>
+	<option value="19" title="Niger">Niger</option>
+	<option value="33" title="Ogun">Ogun</option>
+	<option value="20" title="Ondo">Ondo</option>
+	<option value="21" title="Osun">Osun</option>
+	<option value="22" title="Oyo">Oyo</option>
+	<option value="23" title="Plateau">Plateau</option>
+	<option value="41" title="Rivers">Rivers</option>
+	<option value="24" title="Sokoto">Sokoto</option>
+	<option value="26" title="Taraba">Taraba</option>
+	<option value="25" title="Yobe">Yobe</option>
+	<option value="27" title="Zamfara">Zamfara</option>
+
+    </select>    </td>
+  </tr>  
+      
+      
+    <script language="javascript">
+       </script>
+</tbody></table></fieldset> 
+  
+  
+  
+
+ 
+  <fieldset> 
+  <legend>PARENT / GUARDIANS DETAILS:</legend>
+  <table width="100%" cellpadding="2" cellspacing="1" rules="all">
+   <tbody><tr>
+    <td width="180" align="left"><label>Title:<span>*</span></label></td>
+    <td><select name="title">
+    <option value="-1">--title--</option>
+    <option value="Mr">Mr</option>
+    <option value="Ms">Mrs</option>
+	<option value="Dr">Dr</option>
+    </select>    </td>
+  </tr>
+  <tr>
+    <td width="180" align="left"><label>P.G Full Name:<span>*</span></label></td>
+    <td><input name="first_name" type="text" id="full_name" value=""></td>
+  </tr>
+  <tr>
+    <td width="180" align="left"><label>P.G Address:</label></td>
+    <td><input type="text" name="middle_name" id="middle_name" value=""></td>
+  </tr>
+  <tr>
+    <td width="180" align="left"><label>P.G Occupation:<span>*</span></label></td>
+    <td><input type="text" name="last_name" id="last_name" value=""></td>
+  </tr>
+  
+  <tr>
+    <td width="180" align="left"><label>P.G Gender:<span>*</span></label></td>
+    <td>
+    <select name="gender">
+    <option value="-1">--select--</option>
+    <option value="M">Male</option>
+    <option value="F">Female</option>
+    </select>    </td>
+  </tr>
+  <tr>
+  
+  </tr>
+  <tr>
+    <td width="180" align="left"><label>P.G Email:<span>*</span></label></td>
+    <td><input type="text" name="email" id="email" value=""></td>
+  </tr>
+  <tr>
+    <td width="180" align="left"><label>P.G Mobile No. 1:<span>*</span></label></td>
+    <td><input type="text" name="mobile" id="mobile" value=""></td>
+  </tr>
+  <tr>
+    <td width="180" align="left"><label>P.G Mobile No. 2:</label></td>
+    <td><input type="text" name="mobile1" id="mobile1" value=""></td>
+  </tr>
+      </tbody></table></fieldset>
+  
+  
+    <fieldset> 
+  <legend>NEXT OF KIN DETAILS:</legend>
+  <table width="100%" cellpadding="2" cellspacing="1" rules="all">
+   <tbody><tr>
+    <td width="180" align="left"><label>Title:<span>*</span></label></td>
+    <td><select name="title">
+    <option value="-1">--title--</option>
+    <option value="Mtr">Mtr</option>
+    <option value="Ms">Ms</option>
+	<option value="Mr">Mr</option>
+    <option value="Mrs">Mrs</option>
+    <option value="Dr">Dr</option>
+        
+    </select>    </td>
+  </tr>
+  <tr>
+    <td width="180" align="left"><label> N.O.K Full Name:<span>*</span></label></td>
+    <td><input name="first_name" type="text" id="full_name" value=""></td>
+  </tr>
+  <tr>
+    <td width="180" align="left"><label>N.O.K Address:</label></td>
+    <td><input type="text" name="middle_name" id="middle_name" value=""></td>
+  </tr>
+  <tr>
+    <td width="180" align="left"><label>N.O.K Occupation:<span>*</span></label></td>
+    <td><input type="text" name="last_name" id="last_name" value=""></td>
+  </tr>
+  
+  <tr>
+    <td width="180" align="left"><label>N.O.K Gender:<span>*</span></label></td>
+    <td>
+    <select name="gender">
+    <option value="-1">--select--</option>
+    <option value="M">Male</option>
+    <option value="F">Female</option>
+    </select>    </td>
+  </tr>
+  <tr>
+  
+  </tr>
+  <tr>
+    <td width="180" align="left"><label>N.O.K Email:<span>*</span></label></td>
+    <td><input type="text" name="email" id="email" value=""></td>
+  </tr>
+  <tr>
+    <td width="180" align="left"><label>N.O.K Mobile No. 1:<span>*</span></label></td>
+    <td><input type="text" name="mobile" id="mobile" value=""></td>
+  </tr>
+  <tr>
+    <td width="180" align="left"><label>N.O.K Mobile No. 2:</label></td>
+    <td><input type="text" name="mobile1" id="mobile1" value=""></td>
+  </tr>
+      </tbody></table></fieldset>
+  
+    <fieldset>
+  <legend>ABOUT US:</legend>
+  <table width="800" cellpadding="2" cellspacing="1" rules="all">
+    <tbody><tr>
+    <td width="180" align="left"><label>How did you get to know about AERL Scholarship:<span>*</span></label></td>
+    <td>
+    <select name="course_mode" id="course_mode" onchange="get_prog();">
+    <option value="-1">--select mode--</option>
+	
+			<option value="4">Facebook</option>
+			<option value="4">Nairaland</option>
+			<option value="4">Newspaper</option>
+			<option value="4">Radio</option>
+			<option value="4">SMS</option>
+			<option value="4">Google</option>
+			<option value="4">TV</option>
+			<option value="4">Friend</option>
+			<option value="4">Past Winner</option>
+			<option value="4">MyJobMag.com</option>
+			<option value="4">MySchool</option>
+			<option value="4">Other</option>    		
+		    </select>    </td>
+  </tr>
+  </tbody></table>
+  </fieldset>
+  <table>
+  <tbody><tr>
+  <td width="600">&nbsp;</td>
+    <td align="right">
+     <input name="submit" type="submit" id="submit" value="Submit Application &gt;&gt;" class="button">   </td>
+    </tr>
+
+      
+  <tr>
+    <td colspan="2" align="center"><img src="./register/footer.png" width="665" height="90"></td>
+  </tr>
+</tbody></table>
+</form>
+</body></html>
